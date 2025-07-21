@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dépannage Informatique à Domicile - Welia Support IT Africa</title>
+    <meta name="description" content="Service de dépannage informatique à domicile en Afrique. Assistance rapide, réparation PC, résolution de problèmes techniques par des experts.">
+    <link rel="stylesheet" href="css-pages/depannage-page.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top info bar -->
+    <div class="top-info-bar">
+        <div class="container">
+            <div class="info-content">
+                <div class="contact-details">
+                    <span class="contact-item">
+                        <i class="icon">📞</i>
+                        +221 76 458 13 00
+                    </span>
+                    <span class="contact-item">
+                        <i class="icon">✉️</i>
+                        contact@welia-africa.com
+                    </span>
+                </div>
+                <div class="hours">
+                    <span class="contact-item">
+                        <i class="icon">🕒</i>
+                        <span class="desktop-hours">L-V: 9:00 - 19:00 | S-D: 10:00 - 17:00</span>
+                        <span class="mobile-hours">L-V: 9h-19h | S-D: 10h-17h</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                     <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Accueil</a>
+                    <div class="dropdown">
+                        <a href="#services" class="dropdown-trigger">
+                            Services
+                            <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                        </div>
+                    </div>
+                    <a href="tarifs.html">Nos Tarifs</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    
+                    <div class="cart-container">
+                        <button class="btn-cart">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"></path>
+                                <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"></path>
+                                <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"></path>
+                            </svg>
+                            <span class="cart-badge">0</span>
+                        </button>
+                    </div>
+                     <a href="boutique.html" class="btn btn-question boutique"> 🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question ">Prendre RDV➡️</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">DÉPANNAGE SOUS 24H</div>
+                <h1>Assistance et dépannage informatique<br>à domicile en Afrique</h1>
+                <div class="hero-features">
+                    <div class="feature">
+                        <span class="check-icon">✓</span>
+                        <span>Éligible crédit d'impôt</span>
+                    </div>
+                    <div class="feature">
+                        <span class="check-icon">✓</span>
+                        <span>Informaticiens PRO</span>
+                    </div>
+                    <div class="feature">
+                        <span class="check-icon">✓</span>
+                        <span>SAV</span>
+                    </div>
+                    <div class="feature">
+                        <span class="check-icon">✓</span>
+                        <span>Garanties</span>
+                    </div>
+                </div>
+                <p class="hero-description">
+                    Un problème avec votre ordinateur, un périphérique ou votre réseau ?<br>
+                    Un informaticien expérimenté se déplace à domicile pour vous apporter une solution rapide.<br><br>
+                    Nous apportons également notre assistance pour les besoins informatiques courants :<br>
+                    installations, paramétrages, conseils...
+                </p>
+                <div class="hero-buttons">
+                    <a href="reservation.html" class="btn btn-primary">JE RÉSERVE</a>
+                    <button class="btn btn-secondary" onclick="scrollToFAQ()">J'AI UNE QUESTION</button>
+                    <button class="btn btn-tertiary">AUTRES SERVICES</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">NOS SERVICES RÉSUMÉS</span>
+                <h2>Nos services de dépannage et<br>d'aide informatique en Afrique</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Réparations & Modifications</h3>
+                    <p>Changements de pièces - Diagnostic d'allumage ou de fonctionnement - Refroidissement & Nettoyage</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Optimisation PC</h3>
+                    <p>Entretien logiciel - Installation de SSD - Ajout de RAM</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Assistance informatique</h3>
+                    <p>Assistance utilisateur sur Ordinateur - Box - Téléphone - Tablette - NAS et périphériques divers</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🖨️</div>
+                    <h3>Imprimantes</h3>
+                    <p>Problèmes de connexion et installation d'imprimante: hors panne et usure matérielles.</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Bugs & Problèmes logiciels</h3>
+                    <p>Démarrage Windows - Bugs - Problèmes de compte - Perte de mot de passe - Paramétrages divers</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud, Multimédia, Sauvegardes</h3>
+                    <p>Faire vos sauvegardes, transférer des données, synchroniser des services cloud</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📶</div>
+                    <h3>Internet, Box & réseau</h3>
+                    <p>Dépannage et installation de Box - CPL & répéteurs, optimisations, conseil et diagnostic avant achat.</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Virus & Piratages</h3>
+                    <p>Suppression de virus avancée - Diagnostic d'intrusion sur comptes en ligne (mails, comptes pro, réseaux...)</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>caméras de surveillance</h3>
+                    <p>Suppression de virus avancée - Diagnostic d'intrusion sur comptes en ligne (mails, comptes pro, réseaux...)</p>
+                    <a href="#" class="service-link">Détails →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">DÉTAILS SUPPLÉMENTAIRES</span>
+                <h2>Nos solutions aux pannes et<br>besoins informatiques courants</h2>
+            </div>
+            <p class="solutions-intro">
+                Sélectionnez une problématique dans la liste pour découvrir nos solutions.<br>
+                Cliquez sur "Dépannage Windows" pour dérouler la liste.
+            </p>
+            
+            <div class="solutions-dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown('windows')">
+                    Dépannage Windows
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+                <div class="dropdown-content" id="windows-content">
+                    <div class="problem-showcase">
+                        <h3>Windows est bloqué au démarrage</h3>
+                        <div class="windows-screens">
+                            <div class="screen-item">
+                                <div class="screen-mockup">💻</div>
+                                <p>Écran de démarrage Windows</p>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-mockup">⚠️</div>
+                                <p>Diagnostic de votre ordinateur</p>
+                            </div>
+                            <div class="screen-item">
+                                <div class="screen-mockup">🔄</div>
+                                <p>Réparation en cours</p>
+                            </div>
+                        </div>
+                        <div class="solution-details">
+                            <p>Lorsque votre ordinateur rencontre une panne de démarrage à l'allumage, cela est souvent causé par un bug dans les fichiers système de Windows.</p>
+                            <ul>
+                                <li>Nous pourrons rétablir un fonctionnement normal en utilisant des techniques et des outils appropriés.</li>
+                                <li>En cas de panne sévère, une réinstallation de Windows peut être envisagée. Dans ce cas, vos données seront sauvegardées.</li>
+                                <li>Si votre disque dur est défectueux, nous pouvons vous fournir un disque de remplacement à domicile lors de notre intervention.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">POINTS FORTS DU SERVICE</span>
+                <h2>Les avantages de nos services<br>informatiques</h2>
+            </div>
+            
+            <div class="advantage-tabs">
+                <button class="tab-btn active" onclick="showTab('intervention')">Intervention rapide</button>
+                <button class="tab-btn" onclick="showTab('materiel')">Fourniture du Matériel</button>
+                <button class="tab-btn" onclick="showTab('solutions')">Solutions Personnalisées</button>
+                <button class="tab-btn" onclick="showTab('garanties')">Garanties et SAV</button>
+            </div>
+            
+            <div class="tab-content active" id="intervention-content">
+                <p>Votre informaticien se déplace à domicile ou dans vos locaux rapidement et sur tout l'Afrique : grâce au formulaire que vous avez rempli, le matériel adéquat est apporté par l'informaticien et le temps nécessaire est prévu. Ainsi, nous évitons les délais inutiles.</p>
+            </div>
+            
+            <div class="tab-content" id="materiel-content">
+                <p>Nous apportons tout le matériel nécessaire lors de nos interventions. Disques durs, RAM, SSD, câbles et outils spécialisés sont disponibles pour une réparation immédiate sans attendre de nouvelles commandes.</p>
+            </div>
+            
+            <div class="tab-content" id="solutions-content">
+                <p>Chaque intervention est adaptée à vos besoins spécifiques. Nous prenons le temps d'analyser votre problème et proposons la solution la plus appropriée pour votre situation et votre budget.</p>
+            </div>
+            
+            <div class="tab-content" id="garanties-content">
+                <p>Toutes nos interventions sont garanties. Notre service après-vente vous assure un suivi de qualité et une assistance continue pour vous accompagner dans l'utilisation de vos équipements réparés.</p>
+            </div>
+            
+            <div class="advantage-actions">
+                <a href="reservation.html" class="btn btn-primary">JE RÉSERVE</a>
+                <button class="btn btn-secondary">AVIS CLIENTS</button>
+                <button class="btn btn-tertiary">ZONES DESSERVIES</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">GAGNEZ DU TEMPS</span>
+                <h2>Réponses à vos questions</h2>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQItem(this)">
+                        Comment réserver un dépannage informatique à domicile en Afrique ?
+                        <svg class="faq-arrow" viewBox="0 0 24 24">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vous pouvez réserver facilement en ligne via notre formulaire ou nous appeler directement. Notre équipe vous recontactera dans les plus brefs délais pour planifier l'intervention.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQItem(this)">
+                        Proposez-vous de la vente ou des services en boutique ?
+                        <svg class="faq-arrow" viewBox="0 0 24 24">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, nous avons une boutique en ligne proposant du matériel informatique et des services complémentaires adaptés aux besoins africains.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQItem(this)">
+                        Fournissez-vous le matériel si une intervention le nécessite ?
+                        <svg class="faq-arrow" viewBox="0 0 24 24">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolument ! Nos techniciens apportent le matériel nécessaire lors de l'intervention pour éviter les délais supplémentaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                     <a href="index.html">
+                        <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                     </a>
+                    </div>
+                    <p>Le support informatique en ligne indispensable pour l'Afrique. Nous accompagnons particuliers et entreprises dans leur transformation digitale.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="#">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p>📧 contact@welia-africa.com</p>
+                        <p>📞 +221 76 458 13 00</p>
+                        <p>📍 Dakar, Senegal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-pages/depannage-page.js"></script>
+</body>
+</html>

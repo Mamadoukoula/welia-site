@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bien Choisir votre Matériel - Welia Online Support Africa</title>
+    <meta name="description" content="Le conseil d'achat pour définir le meilleur choix en fonction de vos besoins et votre budget. Support informatique professionnel en Afrique.">
+    <link rel="stylesheet" href="css-pages/choix-materiel.css">
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +221 76 458 13 00</span>
+                        <span><i class="fas fa-envelope"></i> contact@welia-africa.com</span>
+                    </div>
+                    <div class="hours-info">
+                        <span><i class="fas fa-clock"></i> L-V: 9:00 - 19:00 | S-D: 10:00 - 17:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                   <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+                
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html">Accueil</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-btn" onclick="toggleDropdown('services')">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content" id="services-content">
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                        </div>
+                    </div>
+                    <a href="blog.html">Blog</a>
+                    <a href="tarifs.html">Nos Tarifs</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                    <button class="btn-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique"> 🛒Boutique</a>
+                     <a href="reservation.html" class="btn btn-question">
+                        Prendre RDV➡️
+                     </a>
+                </div>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bien Choisir votre Matériel</h1>
+                <p class="hero-subtitle">Le conseil d'achat vous aide à définir le meilleur choix en fonction de vos besoins et votre budget</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToConseil()">
+                        <i class="fas fa-lightbulb"></i>
+                        Obtenir des Conseils
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToExemples()">
+                        <i class="fas fa-eye"></i>
+                        Voir des Exemples
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Les Bonnes Questions pour les Bonnes Solutions</h2>
+            <div class="process-grid">
+                <div class="process-card" data-step="1">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Définir votre besoin">
+                        <div class="process-overlay">
+                            <h3>Précisez votre besoin</h3>
+                        </div>
+                    </div>
+                    <div class="process-content">
+                        <h4>Définissez votre Besoin</h4>
+                        <p>Décrivez votre situation, vos attentes, vos <strong>priorités</strong> et votre <strong>budget</strong>. Ainsi vous posez les bases d'une recherche adaptée.</p>
+                    </div>
+                </div>
+                
+                <div class="process-card" data-step="2">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Trier les options">
+                        <div class="process-overlay">
+                            <h3>Éclairer vos choix</h3>
+                        </div>
+                    </div>
+                    <div class="process-content">
+                        <h4>Triez les Options</h4>
+                        <p>À partir de vos attentes, recevez des <strong>réponses claires</strong> et des options <strong>précises, adaptées</strong> à votre <strong>besoin</strong> et votre <strong>budget</strong>.</p>
+                    </div>
+                </div>
+                
+                <div class="process-card" data-step="3">
+                    <div class="process-image">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fournisseur fiable">
+                        <div class="process-overlay">
+                            <h3>Où acheter</h3>
+                        </div>
+                    </div>
+                    <div class="process-content">
+                        <h4>Quel fournisseur fiable ?</h4>
+                        <p>L'importance de vos <strong>matériels</strong> ou <strong>logiciels</strong> à acheter doit vous orienter vers des <strong>fournisseurs fiables</strong> et pertinents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Access Section -->
+    <section class="service-access" id="conseil">
+        <div class="container">
+            <h2>Comment accéder à notre service de Conseil d'Achat</h2>
+            <div class="access-steps">
+                <div class="access-step">
+                    <div class="step-number">1</div>
+                    <p>Contactez-nous en ayant défini votre besoin, les grandes lignes.</p>
+                </div>
+                <div class="access-step">
+                    <div class="step-number">2</div>
+                    <p>Nous établissons une offre en fonction du nombre d'éléments de votre demande.</p>
+                </div>
+                <div class="access-step">
+                    <div class="step-number">3</div>
+                    <p>Nous démarrons l'étude des spécifications du devis et son règlement.</p>
+                </div>
+                <div class="access-step">
+                    <div class="step-number">4</div>
+                    <p>Vous n'avez plus qu'à choisir votre matériel parmi nos 2 ou 3 propositions 😊</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions-section">
+        <div class="container">
+            <h2>Deux Solutions au Choix</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Recevez notre config du moment</h3>
+                    <p>En vous inscrivant à cette mailing-list vous recevrez gratuitement notre dernière proposition de configuration matérielle.</p>
+                    <button class="btn btn-warning" onclick="openNewsletterModal()">
+                        <i class="fas fa-envelope"></i>
+                        S'inscrire
+                    </button>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Prendre un rendez-vous en direct</h3>
+                    <p>Un échange de vive voix pour clarifier vos attentes et vous apporter une réponse ciblée et pertinente.</p>
+                    <button class="btn btn-warning" onclick="openReservationModal()">
+                        <i class="fas fa-phone"></i>
+                        Contactez-Nous
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section" id="exemples">
+        <div class="container">
+            <h2>3 Exemples de Conseil d'Achat</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Souris ergonomique">
+                        <div class="example-badge">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Souris ergonomique</h3>
+                        <p><i class="fas fa-check-circle"></i> Une souris ergonomique</p>
+                        <button class="btn btn-outline" onclick="showExampleDetails('souris')">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Clavier meilleur prix">
+                        <div class="example-badge">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Clavier meilleur prix</h3>
+                        <p><i class="fas fa-check-circle"></i> Un clavier top qualité/prix</p>
+                        <button class="btn btn-outline" onclick="showExampleDetails('clavier')">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Répéteur WiFi">
+                        <div class="example-badge">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                    </div>
+                    <div class="example-content">
+                        <h3>Répéteur WiFi</h3>
+                        <p><i class="fas fa-check-circle"></i> Un répéteur WiFi</p>
+                        <button class="btn btn-outline" onclick="showExampleDetails('wifi')">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Faites le choix de la tranquillité et de l'efficacité</h2>
+            <p class="benefits-intro">Nous mettons tout en œuvre pour vous offrir une solution adaptée à vos besoins personnels ou professionnels.</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Vous gagnez du temps</strong> en évitant des heures de recherche et de comparaisons seul.
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Vous bénéficiez d'un proposition optimale</strong>, chaque configuration est pensée pour maximiser le rapport performance / budget.
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Nous proposons au moins 2 réponses</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQItem(this)">
+                        <span>Combien coûte le service de conseil d'achat ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le coût varie selon la complexité de votre demande. Nous établissons un devis personnalisé après analyse de vos besoins. Pour les demandes simples, nous proposons souvent une première orientation gratuite.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQItem(this)">
+                        <span>Dans quels délais recevrai-je mes recommandations ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Généralement sous 48-72h pour les demandes standards. Pour les projets plus complexes nécessitant une étude approfondie, nous vous communiquons un délai précis lors de l'établissement du devis.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQItem(this)">
+                        <span>Proposez-vous aussi l'achat et la livraison ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous nous concentrons sur le conseil d'achat pour rester objectifs. Cependant, nous pouvons vous orienter vers des fournisseurs fiables et partenaires en Afrique pour vos achats.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQItem(this)">
+                        <span>Quel type de matériel pouvez-vous conseiller ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ordinateurs, serveurs, équipements réseau, périphériques, logiciels, solutions de sécurité, équipements audiovisuels professionnels et tout matériel informatique adapté au contexte africain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à faire le bon choix ?</h2>
+                <p>Laissez-nous vous accompagner dans la sélection de votre matériel informatique</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openReservationModal()">
+                        <i class="fas fa-phone"></i>
+                        Demander un Conseil
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="openNewsletterModal()">
+                        <i class="fas fa-envelope"></i>
+                        Config du Moment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                         <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a>
+                    </div>
+                    <p>Le support informatique en ligne indispensable pour l'Afrique. Nous accompagnons particuliers et entreprises dans leur transformation digitale.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="depannage-page.html">Dépannage Informatique</a></li>
+                        <li><a href="#assistance">Assistance à Distance</a></li>
+                        <li><a href="#securite">Sécurité WiFi</a></li>
+                        <li><a href="#antivirus">Protection Antivirus</a></li>
+                        <li><a href="choix-materiel.html">Choix de Matériel</a></li>
+                        <li><a href="#formation">Formation Informatique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#particuliers">Pour Particuliers</a></li>
+                        <li><a href="#entreprises">Pour Entreprises</a></li>
+                        <li><a href="#tpe-pme">Pour TPE/PME</a></li>
+                        <li><a href="#support-24-7">Support 24/7</a></li>
+                        <li><a href="#maintenance">Maintenance Préventive</a></li>
+                        <li><a href="#consulting">Consulting IT</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>Dakar, Senegal<br>Plateau, Rue des Jardins</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                    <div class="footer-links">
+                        <a href="#mentions">Mentions Légales</a>
+                        <a href="#confidentialite">Politique de Confidentialité</a>
+                        <a href="#cgv">CGV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script-pages/choix-materiel.js"></script>
+
+</body>
+</html>

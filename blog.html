@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Informatique - Welia Support IT AFRICA</title>
+    <link rel="stylesheet" href="css-pages/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Le Blog Informatique</h1>
+                <p class="hero-subtitle">Bienvenue sur le Blog informatique de Welia Support IT AFRICA !</p>
+                <p class="hero-description">
+                    Vous trouverez ici des guides et conseils divers, quelques actualités et surtout des 
+                    tutoriels très détaillés pour les débutants comme les utilisateurs plus confirmés: 
+                    informatique en général, hardware et dépannage.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-filter-section">
+        <div class="container">
+            <div class="search-filter-content">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Rechercher des articles...">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                
+                <div class="category-filter">
+                    <select id="categoryFilter">
+                        <option value="Tous les articles">Tous les articles</option>
+                        <option value="Tutoriels de dépannage">Tutoriels de dépannage</option>
+                        <option value="Hardware & Gaming">Hardware & Gaming</option>
+                        <option value="Écologie">Écologie</option>
+                        <option value="Guides & Dossiers">Guides & Dossiers</option>
+                        <option value="Tutoriels divers">Tutoriels divers</option>
+                        <option value="Sécurité informatique">Sécurité informatique</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Articles Grid -->
+                <div class="articles-section">
+                    <div class="section-header">
+                        <h2>Derniers articles</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    
+                    <div class="articles-grid" id="articlesGrid">
+                        <!-- Articles will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <!-- Categories Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Catégories</h3>
+                        <div class="categories-list" id="categoriesList">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Popular Articles Widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">Articles populaires</h3>
+                        <div class="popular-articles" id="popularArticles">
+                            <!-- Popular articles will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p class="newsletter-description">
+                            Recevez nos derniers articles directement dans votre boîte mail.
+                        </p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit">S'abonner</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo">
+                         <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-description">
+                        Votre partenaire de confiance pour tous vos besoins informatiques en Afrique. 
+                        Support technique, dépannage et conseils personnalisés.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nos Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script-pages/blog.js"></script>
+</body>
+</html>

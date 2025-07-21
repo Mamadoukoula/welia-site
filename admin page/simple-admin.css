@@ -1,0 +1,170 @@
+/* Styles personnalisés pour l'interface d'administration */
+
+/* Animation de chargement */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Styles pour les lignes de tableau selon le statut */
+.order-row-pending {
+    background-color: #fef3c7; /* bg-yellow-50 */
+}
+
+.order-row-pending:hover {
+    background-color: #fde68a; /* bg-yellow-100 */
+}
+
+.order-row-delivered {
+    background-color: #dcfce7; /* bg-green-50 */
+}
+
+.order-row-delivered:hover {
+    background-color: #bbf7d0; /* bg-green-100 */
+}
+
+.order-row-cancelled {
+    background-color: #fef2f2; /* bg-red-50 */
+}
+
+.order-row-cancelled:hover {
+    background-color: #fecaca; /* bg-red-100 */
+}
+
+/* Styles pour les badges de statut */
+.status-pending {
+    background-color: #fef3c7; /* bg-yellow-100 */
+    color: #92400e; /* text-yellow-800 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-delivered {
+    background-color: #dcfce7; /* bg-green-100 */
+    color: #166534; /* text-green-800 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-cancelled {
+    background-color: #fef2f2; /* bg-red-100 */
+    color: #991b1b; /* text-red-800 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Style pour les selects de statut */
+.status-select {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.status-select:hover {
+    transform: scale(1.05);
+}
+
+.status-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Transitions pour les lignes de tableau */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Styles pour les cartes de statistiques */
+.stats-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 600px;
+    }
+}
+
+/* Animation d'apparition */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Styles pour les messages d'erreur */
+.error-message {
+    border-left: 4px solid #ef4444;
+    background-color: #fef2f2;
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+.error-message p {
+    color: #991b1b;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Styles pour les boutons */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Scrollbar personnalisée */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

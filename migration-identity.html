@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration Identity & Hybridation AD - WELIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css-pages/migration-identity.css">
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                  <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+
+                <nav class="nav-desktop">
+                     <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support IT</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                                
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="services.html#protection">Protection des Données</a>
+                                <a href="services.html#reseaux">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Cloud</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="services.html#emailing">Solutions cloud Microsoft 365</a>
+                                <a href="services.html#wordpress">Hybridation AD on-promise vs Cloud</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique"> 🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question ">Prendre RDV➡️</a>
+
+                <button class="mobile-menu-btn" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-migration">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Migration Expert</span>
+                </div>
+                <h1>Migration Identity & <span class="text-gradient">Hybridation AD</span></h1>
+                <p>
+                    Migrez vos infrastructures vers le cloud en toute sécurité. 
+                    Hybridation Active Directory, migration OS et gestion d'identité centralisée.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openMigrationModal()">
+                        <i class="fas fa-comments"></i>
+                        Évaluation Gratuite
+                    </button>
+                    <a href="#services-migration" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i>
+                        Nos Solutions
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="migration-diagram">
+                    <div class="on-premise-side">
+                        <div class="server-icon">
+                            <i class="fas fa-server"></i>
+                            <span>On-Premise AD</span>
+                        </div>
+                    </div>
+                    <div class="migration-arrow">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="cloud-side">
+                        <div class="cloud-icon">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure AD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-migration" class="services-migration">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Services de Migration</h2>
+                <p>Solutions complètes pour votre transformation numérique</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card-migration">
+                    <div class="service-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3>Hybridation Active Directory</h3>
+                    <p>Intégration seamless entre votre AD on-premise et Azure AD pour une gestion d'identité unifiée.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Azure AD Connect</li>
+                        <li><i class="fas fa-check"></i> Single Sign-On (SSO)</li>
+                        <li><i class="fas fa-check"></i> Synchronisation bidirectionnelle</li>
+                    </ul>
+                    <button class="btn-service" onclick="showMigrationDetails('ad-hybrid')">En savoir plus</button>
+                </div>
+
+                <div class="service-card-migration">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Migration OS Windows</h3>
+                    <p>Mise à niveau sécurisée de Windows 10 vers Windows 11 avec préservation des données et applications.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Analyse de compatibilité</li>
+                        <li><i class="fas fa-check"></i> Sauvegarde complète</li>
+                        <li><i class="fas fa-check"></i> Migration transparente</li>
+                    </ul>
+                    <button class="btn-service" onclick="showMigrationDetails('os-migration')">En savoir plus</button>
+                </div>
+
+                <div class="service-card-migration">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sécurité & Identité</h3>
+                    <p>Implémentation de solutions de sécurité avancées et gestion centralisée des identités.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Multi-Factor Authentication</li>
+                        <li><i class="fas fa-check"></i> Conditional Access</li>
+                        <li><i class="fas fa-check"></i> Identity Protection</li>
+                    </ul>
+                    <button class="btn-service" onclick="showMigrationDetails('security')">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Migration Timeline -->
+    <section class="migration-timeline">
+        <div class="container">
+            <div class="timeline-header">
+                <h2>Processus de Migration en 5 Étapes</h2>
+                <p>Méthodologie éprouvée pour une migration réussie</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1. Audit & Évaluation</h3>
+                        <p>Analyse complète de votre infrastructure actuelle et définition du plan de migration.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. Planification</h3>
+                        <p>Élaboration du calendrier de migration et préparation de l'environnement cible.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>3. Configuration</h3>
+                        <p>Mise en place des services cloud et configuration des outils de synchronisation.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>4. Migration</h3>
+                        <p>Transfert sécurisé des données et migration progressive des utilisateurs.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>5. Validation</h3>
+                        <p>Tests complets, formation des utilisateurs et optimisation finale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility Checker -->
+    <section class="compatibility-checker">
+        <div class="container">
+            <div class="checker-content">
+                <div class="checker-header">
+                    <h2>Vérificateur de Compatibilité Windows 11</h2>
+                    <p>Testez la compatibilité de votre système avec Windows 11</p>
+                </div>
+                
+                <div class="checker-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cpu-model">Processeur</label>
+                            <input type="text" id="cpu-model" placeholder="Ex: Intel i5-8400">
+                        </div>
+                        <div class="form-group">
+                            <label for="ram-amount">RAM (GB)</label>
+                            <select id="ram-amount">
+                                <option value="4">4 GB</option>
+                                <option value="8">8 GB</option>
+                                <option value="16">16 GB</option>
+                                <option value="32">32 GB ou plus</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="storage-type">Stockage</label>
+                            <select id="storage-type">
+                                <option value="hdd">HDD</option>
+                                <option value="ssd">SSD</option>
+                                <option value="nvme">NVMe SSD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tpm-version">Version TPM</label>
+                            <select id="tpm-version">
+                                <option value="none">Aucun</option>
+                                <option value="1.2">TPM 1.2</option>
+                                <option value="2.0">TPM 2.0</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-check" onclick="checkCompatibility()">
+                        <i class="fas fa-search"></i>
+                        Vérifier la Compatibilité
+                    </button>
+                    
+                    <div id="compatibility-result" class="compatibility-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-migration">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt pour votre Migration ?</h2>
+                <p>Nos experts vous accompagnent dans votre transformation numérique</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openMigrationModal()">
+                        <i class="fas fa-rocket"></i>
+                        Démarrer ma Migration
+                    </button>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-envelope"></i>
+                        Nous Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Migration -->
+    <div id="migration-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMigrationModal()">&times;</span>
+            <h3>Évaluation Gratuite de Migration</h3>
+            <form id="migration-form">
+                <div class="form-group">
+                    <label for="company-name">Nom de l'entreprise</label>
+                    <input type="text" id="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Nom du contact</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="current-infrastructure">Infrastructure actuelle</label>
+                    <select id="current-infrastructure">
+                        <option value="on-premise">100% On-Premise</option>
+                        <option value="hybrid">Hybride</option>
+                        <option value="partial-cloud">Partiellement Cloud</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="users-count">Nombre d'utilisateurs</label>
+                    <input type="number" id="users-count" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="migration-needs">Besoins de migration</label>
+                    <textarea id="migration-needs" rows="4" placeholder="Décrivez vos besoins spécifiques..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Demander mon évaluation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        Le support informatique en ligne indispensable pour l'Afrique. 
+                        Nous accompagnons particuliers et entreprises dans leur transformation digitale.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-pages/migration-identity.js"></script>
+</body>
+</html>

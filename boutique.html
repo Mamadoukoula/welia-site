@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>WELIA TechStore - Boutique Informatique</title>
+    <link href="boutique.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+      <!--  1. Ajout de Supabase dans ton HTML === -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+          <h1>
+             <i class="fas fa-shopping-cart"></i>
+             <a href="boutique.html" class="logo-link">WELIAStore</a>
+          </h1>
+       </div>
+
+           
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Rechercher un produit, une marque...">
+                <button onclick="searchProducts()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <span class="phone">📞 +221 764581300</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#" onclick="filterProducts('all')" class="active">Tous les produits</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" onclick="filterProducts('ordinateurs')">Ordinateurs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="filterProducts('laptops')">Ordinateurs Portables</a></li>
+                        <li><a href="#" onclick="filterProducts('desktop')">Ordinateurs de Bureau</a></li>
+                        <li><a href="#" onclick="filterProducts('mini-pc')">Mini PC</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" onclick="filterProducts('accessoires')">Accessoires <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" onclick="filterProducts('souris')">Souris</a></li>
+                        <li><a href="#" onclick="filterProducts('claviers')">Claviers</a></li>
+                        <li><a href="#" onclick="filterProducts('ecrans')">Écrans</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="filterProducts('reseau')">Réseaux</a></li>
+                <li><a href="#" onclick="filterProducts('serveurs')">Serveurs</a></li>
+                <li><a href="#" onclick="filterProducts('logiciels')">Logiciels</a></li>
+                <li><a href="#" onclick="filterProducts('electrique')">Électrique</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+ <!-- Promo Banner -->
+<div class="promo-banner">
+  <div class="banner-container">
+    <span class="promo-icon">🔥</span>
+    <span class="promo-message">
+      PROMOTIONS HIGH TECH |
+      <strong id="flash-text" class="flash-text">Économisez GROS !</strong>
+      <strong id="discount-text" class="blink-text" style="display: none;">JUSQU'À -80%</strong>
+      <span class="promo-phone">📞 Appelez : +221 76 458 13 00</span>
+    </span>
+  </div>
+</div>
+
+    <!-- Hero Carousel -->
+    <div class="min-h-screen bg-gray-100">
+        <!-- Hero Carousel -->
+        <section class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">DÉSTOCKAGE</span>
+                                <h2>ÉCONOMISEZ<br /><span class="highlight">GROS!</span></h2>
+                                <p class="slide-subtitle">Jusqu'à -80% sur une sélection d'articles</p>
+                                <button class="slide-btn" onclick="filterProducts('all')" class="active">DÉCOUVRIR</button>
+                            </div>
+                            <div class="slide-images">
+                                <div class="product-showcase">
+                                    <div class="showcase-item laptop">💻</div>
+                                    <div class="showcase-item serveurs">🗄️</div>
+                                    <div class="showcase-item headphones">🎧</div>
+                                    <div class="showcase-item tv">📺</div>
+                                    <div class="showcase-item mouse">🖱️</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">NOUVEAUTÉS</span>
+                                <h2>DERNIÈRES<br /><span class="highlight">TECH!</span></h2>
+                                <p class="slide-subtitle">Découvrez nos nouveaux produits</p>
+                                <button class="slide-btn" onclick="filterProducts('laptops')">EXPLORER</button>
+                            </div>
+                            <div class="slide-images">
+                                <div class="product-showcase">
+                                    <div class="showcase-item server">🖥️</div>
+                                    <div class="showcase-item router">📡</div>
+                                    <div class="showcase-item cable">🔌</div>
+                                    <div class="showcase-item battery">🔋</div>
+                                    <div class="showcase-item software">📄</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <span class="slide-badge">LIVRAISON</span>
+                                <h2>LIVRAISON<br /><span class="highlight">RAPIDE!</span></h2>
+                                <p class="slide-subtitle">Commandez et recevez sous 24h</p>
+                                <button class="slide-btn" onclick="location.href='mailto:contact@welia-africa.com'">COMMANDER</button> <!-- NB : Mailto link ajout recente onclick="location.href='mailto:contact@welia-africa.com'"  -->
+                            </div>
+                            <div class="slide-images">
+                                <div class="product-showcase">
+                                    <div class="showcase-item delivery">🚚</div>
+                                    <div class="showcase-item laptop">💻</div>
+                                    <div class="showcase-item phone">📱</div>
+                                    <div class="showcase-item time">⏰</div>
+                                    <div class="showcase-item check">✅</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button class="carousel-btn prev">❮</button>
+                <button class="carousel-btn next">❯</button>
+                
+                <!-- Dots indicator -->
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Nos Catégories</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterProducts('ordinateurs')">
+                    <div class="category-icon">💻</div>
+                    <h3>Ordinateurs</h3>
+                    <p>Portables, Desktop, Mini PC</p>
+                    <span class="category-count" id="count-ordinateurs">0 produits</span>
+                </div>
+                <div class="category-card" onclick="filterProducts('accessoires')">
+                    <div class="category-icon">🖱️</div>
+                    <h3>Accessoires</h3>
+                    <p>Souris, Claviers, Écrans</p>
+                    <span class="category-count" id="count-accessoires">0 produits</span>
+                </div>
+                <div class="category-card" onclick="filterProducts('reseau')">
+                    <div class="category-icon">📡</div>
+                    <h3>Réseaux</h3>
+                    <p>Routeurs, Switches, Cables</p>
+                    <span class="category-count" id="count-reseau">0 produits</span>
+                </div>
+                <div class="category-card" onclick="filterProducts('serveurs')">
+                    <div class="category-icon">🗄️</div>
+                    <h3>Serveurs</h3>
+                    <p>Serveurs d'entreprise</p>
+                    <span class="category-count" id="count-serveurs">0 produits</span>
+                </div>
+                <div class="category-card" onclick="filterProducts('logiciels')">
+                    <div class="category-icon">📄</div>
+                    <h3>Logiciels</h3>
+                    <p>Licences et applications</p>
+                    <span class="category-count" id="count-logiciels">0 produits</span>
+                </div>
+                <div class="category-card" onclick="filterProducts('electrique')">
+                    <div class="category-icon">🔋</div>
+                    <h3>Électrique</h3>
+                    <p>Onduleurs, Cables</p>
+                    <span class="category-count" id="count-electrique">0 produits</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-left">
+                    <span id="productCount">0 produits trouvés</span>
+                </div>
+                <div class="filter-right">
+                    <select id="sortSelect" onchange="sortProducts()">
+                        <option value="default">Trier par</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name-asc">Nom A-Z</option>
+                        <option value="name-desc">Nom Z-A</option>
+                        <option value="discount">Remise</option>
+                    </select>
+                    <button class="view-toggle" onclick="toggleView()" id="viewToggle">
+                        <i class="fas fa-th-list"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Mon Panier</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: <span id="cartTotal">0</span> FCFA</strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
+
+
+ <!-- POPUP DE PROMO  -->
+  <div id="popup-promo" class="popup-overlay">
+    <div class="popup-container">
+      <div class="popup-close" id="close-btn">✕</div>
+      <div class="popup-content">
+        <div class="popup-text">
+          <h2 class="promo-title">20% DE REMISE</h2>
+          <div class="warning-text">⚠️ WARNING: OFFRE LIMITÉE ⚠️</div>
+          <p class="promo-subtitle">Aujourd'hui seulement sur tous nos produits tech</p>
+        </div>
+
+        <div class="popup-products">
+          <div class="product-item">
+            <img src="produits/imprimante-HP.jpg" class="product-img" alt="Smartphone">
+            <h4 class="product-name">Imprimantes HP</h4>
+            <p class="product-price">299€</p>
+          </div>
+          <div class="product-item">
+            <img src="produits/cisco-casque jabra.jpg" class="product-img" alt="Écouteurs">
+            <h4 class="product-name">Écouteurs</h4>
+            <p class="product-price">99€</p>
+          </div>
+          <div class="product-item">
+            <img src="https://public.youware.com/users-website-assets/prod/0cd219ef-d4d3-4a40-8df7-51094c8c5996/ad1f5c912cbf469abaf35168def0f277.jpg" class="product-img" alt="Laptop">
+            <h4 class="product-name">Laptop</h4>
+            <p class="product-price">799€</p>
+          </div>
+        </div>
+
+        <div class="popup-cta-section">
+          <a href="#" class="popup-cta">DÉCOUVRIR TOUS NOS PRODUITS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        Le support informatique en ligne indispensable pour l'Afrique. 
+                        Nous accompagnons particuliers et entreprises dans leur transformation digitale.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="boutique.js"></script>
+</body>
+</html>

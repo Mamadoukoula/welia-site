@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welia Technologies - Support IT en Ligne</title>
+    <meta name="description" content="Welia Online Support Africa - Le support informatique en ligne indispensable pour l'Afrique. Services IT, dépannage, sécurité et assistance technique.">
+    <meta name="author" content="Welia Online Support Africa">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Welia Online Support Africa - Support Informatique en Ligne">
+    <meta property="og:description" content="Le support informatique en ligne indispensable pour l'Afrique. Services IT, dépannage, sécurité et assistance technique.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@welia_africa">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                
+                  <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support IT</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Cloud</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique">🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question">Prendre RDV➡️</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <a href="index.html" class="mobile-link">Accueil</a>
+                
+                <!-- Services with submenu -->
+                <div class="mobile-dropdown">
+                    <button class="mobile-link mobile-dropdown-btn">
+                        Services <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <div class="mobile-dropdown-section">
+                            <h6>Infras & Support IT</h6>
+                            <a href="services.html#decouvrir" class="mobile-submenu-link">Découvrir le service</a>
+                            <a href="depannage-page.html" class="mobile-submenu-link">Assistance et dépannage</a>
+                            <a href="choix-materiel.html" class="mobile-submenu-link">Bien choisir votre matériel</a>
+                        </div>
+                        <div class="mobile-dropdown-section">
+                            <h6>Sécurité Informatique</h6>
+                            <a href="anti-virus-malware.html" class="mobile-submenu-link">Anti-Virus & Malwares</a>
+                            <a href="protection-donnees.html" class="mobile-submenu-link">Protection des Données</a>
+                            <a href="gestion-reseaux-sociaux.html" class="mobile-submenu-link">Réseaux sociaux</a>
+                        </div>
+                        <div class="mobile-dropdown-section">
+                            <h6>Assistance Web et Cloud</h6>
+                            <a href="services.html#creation-web" class="mobile-submenu-link">Création/maintenance de sites web</a>
+                            <a href="cloud-m365.html" class="mobile-submenu-link">Solutions cloud Microsoft 365</a>
+                            <a href="migration-identity.html" class="mobile-submenu-link">Hybridation /Migration Windows</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="tarifs.html" class="mobile-link">Nos Tarifs</a>
+                <a href="blog.html" class="mobile-link">Blog</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+                <div class="mobile-actions">
+                    <a href="boutique.html" class="btn btn-primary">🛒 Boutique</a>
+                    <a href="reservation.html" class="btn btn-outline">Prendre RDV</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+         <div class="hero-content">
+
+           <!-- Corosol to set -->
+        <div class="carousel-container">
+        <div class="carousel-slides" id="carouselSlides">
+            <!-- REMPLACEZ CES IMAGES PAR VOS PROPRES IMAGES -->
+            <div class="carousel-slide">
+                <img src="logo/1 Assistance technique en cours .png" alt="Image 1">
+               
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="logo/2 Assistance technique en cours .png" alt="Image 2"> 
+               
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="logo/3 Assistance technique en cours .png" alt="Image 3">
+               
+            </div>
+            
+            <div class="carousel-slide">
+                <img src="logo/IMG2.png" alt="Image 4">
+               
+            </div>
+        </div>
+        
+        <button class="carousel-nav carousel-prev" id="prevBtn">❮</button>
+        <button class="carousel-nav carousel-next" id="nextBtn">❯</button>
+        
+        <div class="carousel-indicators" id="indicators"></div>
+    </div>
+           
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <p>Besoin d'achats ? Faites vos commande via <a href="boutique.html">🛒 Notre Boutique</a>, nous vous assurons une livraison rapidement et un service SAV.</p>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary btn-large">Démarrer Maintenant</a>
+                    <a href="services.html" class="btn btn-outline btn-large">Découvrir nos Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Le Panorama des Services Personnalisés</h2>
+                <p>Découvrez notre gamme complète de services informatiques conçus spécialement pour répondre aux besoins de l'Afrique moderne</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Row 1 -->
+                <div class="service-card" data-gradient="blue-purple">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Infrastructure Moderne" >
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Infrastructure Moderne</h3>
+                            <p>Solutions cloud et on-premise adaptées à vos besoins</p><a href="migration-identity.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-gradient="green-teal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sécuriser le Wi-Fi">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <h3>Sécuriser le Wi-Fi</h3>
+                            <p>Protection et optimisation de votre réseau sans fil</p> <a href="services.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-gradient="red-pink">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cybersécurité">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h3>Cybersécurité</h3>
+                            <p>Détection, suppression et protection contre les malwares</p><a href="anti-virus-malware.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-gradient="orange-yellow">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sécurité Maximale">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Sécurité Maximale</h3>
+                            <p>Solutions de sécurité avancées pour tous vos appareils</p><a href="gestion-reseaux-sociaux.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <div class="contact-card-content">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Besoin d'un service ?</h3>
+                        <p class="contact-quote">« Contactez-nous aujourd'hui »</p>
+                        <p class="contact-text">Demander une consultation gratuite</p>
+                        <div class="contact-phone">
+                            <i class="fas fa-phone"></i>
+                            <span>+221 76 458 13 00</span><a href="reservation.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="service-card" data-gradient="purple-indigo">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Blog et site web">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                            <h3>Blog et site web</h3>
+                            <p>Création et maintenance de sites web professionnels</p><a href="services.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-gradient="cyan-blue">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Emails et messageries">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-envelope-open"></i>
+                            </div>
+                            <h3>Messageries et Collaborations</h3>
+                            <p>Optimisez votre productivité avec nos solutions Microsoft 365</p><a href="cloud-m365.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="service-card" data-gradient="emerald-green">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Conseil d'achat">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <h3>Conseil d'achat</h3>
+                            <p>Accompagnement dans le choix de votre matériel</p><a href="choix-materiel.html" >suite..</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card" data-gradient="blue-cyan">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Les sauvegardes">
+                        <div class="service-overlay"></div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h3>Assistance et dépannage</h3>
+                            <p>Un problème avec votre ordinateur, un périphérique ou votre réseau ?</p><a href="depannage-page.html" >suite..</a>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+              <div class="section-footer">
+                  <a href="services.html" class="btn btn-gradient btn-large">Voir Tous nos Services</a>
+              </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="reviews-label">FAQ</span>
+                <h2>Questions Fréquemment Posées</h2>
+                <p>Trouvez rapidement les réponses à vos questions sur nos services informatiques</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="faq-search-container">
+                <div class="faq-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="faqSearch" placeholder="Rechercher dans la FAQ..." autocomplete="off">
+                    <button class="search-clear" id="clearSearch" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results-count" id="searchResults" style="display: none;">
+                    <span id="resultsText"></span>
+                </div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all">Toutes</button>
+                <button class="faq-category-btn" data-category="support">Support IT</button>
+                <button class="faq-category-btn" data-category="securite">Sécurité</button>
+                <button class="faq-category-btn" data-category="tarifs">Tarifs</button>
+                <button class="faq-category-btn" data-category="technique">Technique</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-container" id="faqContainer">
+                <!-- Support IT Category -->
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>Comment puis-je obtenir une assistance technique à distance ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Notre assistance à distance se fait en plusieurs étapes simples :</p>
+                        <ul>
+                            <li>Contactez-nous via WhatsApp, email ou téléphone</li>
+                            <li>Décrivez votre problème technique</li>
+                            <li>Nous vous envoyons un lien sécurisé pour la prise de contrôle</li>
+                            <li>Notre technicien résout le problème en temps réel</li>
+                        </ul>
+                        <p>L'intervention est sécurisée et vous gardez le contrôle à tout moment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>Quels types de problèmes informatiques traitez-vous ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous traitons une large gamme de problèmes :</p>
+                        <ul>
+                            <li>Lenteur et plantages du système</li>
+                            <li>Problèmes de connexion internet et Wi-Fi</li>
+                            <li>Installation et configuration de logiciels</li>
+                            <li>Récupération de données perdues</li>
+                            <li>Problèmes d'email et de messagerie</li>
+                            <li>Mise à jour et maintenance système</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sécurité Category -->
+                <div class="faq-item" data-category="securite">
+                    <div class="faq-question">
+                        <h3>Comment protéger mon ordinateur contre les virus ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La protection antivirus nécessite plusieurs mesures :</p>
+                        <ul>
+                            <li>Installation d'un antivirus professionnel à jour</li>
+                            <li>Activation du pare-feu Windows</li>
+                            <li>Mises à jour régulières du système</li>
+                            <li>Navigation prudente et éviter les sites suspects</li>
+                            <li>Sauvegarde régulière de vos données importantes</li>
+                        </ul>
+                        <p>Nous proposons des solutions de sécurité complètes adaptées à vos besoins.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="securite">
+                    <div class="faq-question">
+                        <h3>Mon Wi-Fi est-il sécurisé ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pour vérifier et sécuriser votre Wi-Fi :</p>
+                        <ul>
+                            <li>Utilisez un mot de passe WPA3 ou WPA2 fort</li>
+                            <li>Changez le nom par défaut de votre réseau</li>
+                            <li>Mettez à jour le firmware de votre routeur</li>
+                            <li>Désactivez le WPS si non utilisé</li>
+                            <li>Surveillez les appareils connectés</li>
+                        </ul>
+                        <p>Nous pouvons auditer et sécuriser votre réseau Wi-Fi.</p>
+                    </div>
+                </div>
+
+                <!-- Tarifs Category -->
+                <div class="faq-item" data-category="tarifs">
+                    <div class="faq-question">
+                        <h3>Quels sont vos tarifs pour une intervention ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nos tarifs sont transparents et adaptés à vos besoins :</p>
+                        <ul>
+                            <li>Diagnostic gratuit : 0 €</li>
+                            <li>Intervention ponctuelle : à partir de 25 €</li>
+                            <li>Forfait mensuel : à partir de 50 €</li>
+                            <li>Support entreprise : devis personnalisé</li>
+                        </ul>
+                        <p>Contactez-nous pour un devis détaillé selon votre problématique.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="tarifs">
+                    <div class="faq-question">
+                        <h3>Proposez-vous des forfaits de maintenance ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons plusieurs forfaits de maintenance :</p>
+                        <ul>
+                            <li>Forfait Essentiel : maintenance préventive mensuelle</li>
+                            <li>Forfait Confort : support illimité + maintenance</li>
+                            <li>Forfait Entreprise : solution complète avec SLA</li>
+                        </ul>
+                        <p>Chaque forfait inclut des avantages exclusifs et des tarifs préférentiels.</p>
+                    </div>
+                </div>
+
+                <!-- Technique Category -->
+                <div class="faq-item" data-category="technique">
+                    <div class="faq-question">
+                        <h3>Comment faire une sauvegarde de mes données ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Plusieurs options s'offrent à vous pour sauvegarder vos données :</p>
+                        <ul>
+                            <li>Sauvegarde cloud (Google Drive, OneDrive, iCloud)</li>
+                            <li>Disque dur externe avec synchronisation automatique</li>
+                            <li>Solutions NAS pour les professionnels</li>
+                            <li>Sauvegarde système complète (image disque)</li>
+                        </ul>
+                        <p>Nous configurons et automatisons vos sauvegardes selon vos besoins.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technique">
+                    <div class="faq-question">
+                        <h3>Mon ordinateur est lent, que faire ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La lenteur peut avoir plusieurs causes :</p>
+                        <ul>
+                            <li>Manque d'espace disque (nettoyage nécessaire)</li>
+                            <li>Trop de programmes au démarrage</li>
+                            <li>Malwares ou virus</li>
+                            <li>RAM insuffisante ou défaillante</li>
+                            <li>Disque dur défaillant (passage SSD recommandé)</li>
+                        </ul>
+                        <p>Nous effectuons un diagnostic complet pour identifier et résoudre la cause.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="support">
+                    <div class="faq-question">
+                        <h3>Intervenez-vous sur Mac et PC ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous intervenons sur tous les systèmes :</p>
+                        <ul>
+                            <li>Windows (toutes versions)</li>
+                            <li>macOS (Mac)</li>
+                            <li>Linux (distributions principales)</li>
+                            <li>Smartphones et tablettes (iOS/Android)</li>
+                        </ul>
+                        <p>Nos techniciens sont formés sur l'ensemble de ces plateformes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search"></i>
+                    <h3>Aucun résultat trouvé</h3>
+                    <p>Essayez avec d'autres mots-clés ou <a href="#intervention">contactez-nous directement</a></p>
+                </div>
+            </div>
+
+            <!-- FAQ Footer -->
+            <div class="faq-footer">
+                <div class="faq-contact-prompt">
+                    <h3>Vous ne trouvez pas votre réponse ?</h3>
+                    <p>Notre équipe est là pour vous aider personnellement</p>
+                    <div class="faq-contact-actions">
+                        <a href="#intervention" class="btn btn-primary">Poser une Question</a>
+                        <button class="btn btn-outline" onclick="toggleChat()">Chat en Direct</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Demander une Intervention -->
+    <section class="intervention-form" id="intervention">
+        <div class="intervention-bg">
+            <div class="container">
+                <div class="intervention-header">
+                    <h2>Demander Une Intervention</h2>
+                </div>
+
+                <!-- Étapes du processus -->
+                <div class="etapes-container">
+                    <h3 class="etapes-title">Étapes</h3>
+                    <div class="etapes-grid">
+                        <div class="etape-item">
+                            <div class="etape-number">1</div>
+                            <h4>Diagnostic</h4>
+                            <p>Évaluation gratuite de votre problème</p>
+                        </div>
+                        <div class="etape-item">
+                            <div class="etape-number">2</div>
+                            <h4>Devis</h4>
+                            <p>Proposition transparente et détaillée</p>
+                        </div>
+                        <div class="etape-item">
+                            <div class="etape-number">3</div>
+                            <h4>Intervention</h4>
+                            <p>Résolution rapide et efficace</p>
+                        </div>
+                        <div class="etape-item">
+                            <div class="etape-number">4</div>
+                            <h4>Suivi</h4>
+                            <p>Support et conseils post-intervention</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire -->
+                <div class="form-container">
+                    <form class="intervention-form-content" id="interventionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Type de service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="depannage">Dépannage informatique</option>
+                                <option value="securite">Sécurité et antivirus</option>
+                                <option value="wifi">Configuration Wi-Fi</option>
+                                <option value="sauvegarde">Sauvegarde de données</option>
+                                <option value="formation">Formation informatique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Niveau d'urgence *</label>
+                            <select id="urgency" name="urgency" required>
+                                <option value="">Sélectionnez le niveau d'urgence</option>
+                                <option value="faible">Faible - Sous 48h</option>
+                                <option value="normal">Normal - Sous 24h</option>
+                                <option value="urgent">Urgent - Sous 4h</option>
+                                <option value="critique">Critique - Immédiat</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description du problème *</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Décrivez votre problème en détail..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreement" name="agreement" required>
+                                <span class="checkmark"></span>
+                                J'accepte les <a href="#" target="_blank">conditions générales</a> et la <a href="#" target="_blank">politique de confidentialité</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer ma demande
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo">
+                         <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-description">
+                        Votre partenaire de confiance pour tous vos besoins informatiques en Afrique. 
+                        Support technique, dépannage et conseils personnalisés.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nos Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat flottant -->
+    <div class="chat-overlay" id="chatOverlay"></div>
+    <div class="floating-chat-container">
+        <div class="contact-options" id="contactOptions">
+            <a href="#" class="contact-option whatsapp" id="whatsappBtn" data-tooltip="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.785"/>
+                </svg>
+            </a>
+            <a href="#" class="contact-option sms" id="smsBtn" data-tooltip="SMS">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+            </a>
+            <a href="#" class="contact-option email" id="emailBtn" data-tooltip="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
+        </div>
+        <button class="main-chat-btn" id="mainChatBtn">
+            <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <div class="notification-badge" id="notificationBadge" style="display: none;">1</div>
+        </button>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-body">
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Votre panier est vide</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                Total: <span id="cartTotal">0.00 €</span>
+            </div>
+            <button id="checkoutBtn" class="btn btn-primary btn-block" onclick="processCheckout()" style="display: none;">
+                Finaliser la Commande
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Message Template -->
+    <div class="cart-success-template" style="display: none;">
+        <div class="cart-success">
+            <i class="fas fa-check-circle"></i>
+            <span class="success-text"></span>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

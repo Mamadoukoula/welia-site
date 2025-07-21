@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déploiement et Solutions Cloud Microsoft 365 - WELIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css-pages/cloud-m365.css">
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                     <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support IT</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Cloud</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                  <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique">🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question">Prendre RDV➡️</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-m365">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fab fa-microsoft"></i>
+                    <span>Microsoft 365 Partner</span>
+                </div>
+                <h1>Déploiement et Solutions <span class="text-gradient">Cloud Microsoft 365</span></h1>
+                <p>
+                    Optimisez votre productivité avec nos solutions Microsoft 365. 
+                    Gestion des licences, déploiement sécurisé et formation de vos équipes.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openConsultationModal()">
+                        <i class="fas fa-comments"></i>
+                        Consultation Gratuite
+                    </button>
+                    <a href="#services-m365" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i>
+                        Nos Services
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="m365-icons">
+                    <div class="icon-float" data-app="outlook">
+                        <i class="fas fa-envelope"></i>
+                        <span>Outlook</span>
+                    </div>
+                    <div class="icon-float" data-app="teams">
+                        <i class="fas fa-users"></i>
+                        <span>Teams</span>
+                    </div>
+                    <div class="icon-float" data-app="sharepoint">
+                        <i class="fas fa-share-alt"></i>
+                        <span>SharePoint</span>
+                    </div>
+                    <div class="icon-float" data-app="word">
+                        <i class="fas fa-file-word"></i>
+                        <span>Word</span>
+                    </div>
+                    <div class="icon-float" data-app="excel">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Excel</span>
+                    </div>
+                    <div class="icon-float" data-app="powerpoint">
+                        <i class="fas fa-file-powerpoint"></i>
+                        <span>PowerPoint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services-m365" class="services-m365">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Services Microsoft 365</h2>
+                <p>Solutions complètes pour votre transformation digitale</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card-m365" data-service="deployment">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Déploiement Sécurisé</h3>
+                    <p>Migration complète vers Microsoft 365 avec configuration sécurisée et personnalisée selon vos besoins.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Migration des données</li>
+                        <li><i class="fas fa-check"></i> Configuration sécurisée</li>
+                        <li><i class="fas fa-check"></i> Tests et validation</li>
+                    </ul>
+                    <button class="btn-service" onclick="showServiceDetails('deployment')">En savoir plus</button>
+                </div>
+
+                <div class="service-card-m365" data-service="licenses">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Gestion des Licences</h3>
+                    <p>Optimisation et gestion centralisée de vos licences Microsoft 365 pour réduire les coûts.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Audit des licences</li>
+                        <li><i class="fas fa-check"></i> Optimisation des coûts</li>
+                        <li><i class="fas fa-check"></i> Gestion centralisée</li>
+                    </ul>
+                    <button class="btn-service" onclick="showServiceDetails('licenses')">En savoir plus</button>
+                </div>
+
+                <div class="service-card-m365" data-service="training">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formation & Support</h3>
+                    <p>Formation complète de vos équipes et support technique continu pour maximiser l'adoption.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Formation personnalisée</li>
+                        <li><i class="fas fa-check"></i> Support technique 24/7</li>
+                        <li><i class="fas fa-check"></i> Documentation complète</li>
+                    </ul>
+                    <button class="btn-service" onclick="showServiceDetails('training')">En savoir plus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- License Calculator -->
+    <section class="license-calculator">
+        <div class="container">
+            <div class="calculator-content">
+                <div class="calculator-header">
+                    <h2>Calculateur de Licences M365</h2>
+                    <p>Estimez vos besoins et coûts en licences Microsoft 365</p>
+                </div>
+                
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="users-count">Nombre d'utilisateurs</label>
+                        <input type="number" id="users-count" min="1" value="10" onchange="calculateLicenses()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="license-type">Type de licence</label>
+                        <select id="license-type" onchange="calculateLicenses()">
+                            <option value="basic">Microsoft 365 Business Basic - 6€/mois</option>
+                            <option value="standard">Microsoft 365 Business Standard - 12€/mois</option>
+                            <option value="premium">Microsoft 365 Business Premium - 22€/mois</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calculator-result">
+                        <div class="result-item">
+                            <span class="label">Coût mensuel :</span>
+                            <span class="value" id="monthly-cost">60€</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Coût annuel :</span>
+                            <span class="value" id="yearly-cost">720€</span>
+                        </div>
+                        <div class="result-savings">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Économies potentielles avec notre audit : jusqu'à 30%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-m365">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer votre entreprise ?</h2>
+                <p>Contactez nos experts Microsoft 365 pour une consultation personnalisée</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="openConsultationModal()">
+                        <i class="fas fa-phone"></i>
+                        Consultation Gratuite
+                    </button>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-envelope"></i>
+                        Nous Contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Consultation -->
+    <div id="consultation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationModal()">&times;</span>
+            <h3>Consultation Gratuite Microsoft 365</h3>
+            <form id="consultation-form">
+                <div class="form-group">
+                    <label for="company-name">Nom de l'entreprise</label>
+                    <input type="text" id="company-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Nom du contact</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="current-users">Nombre d'utilisateurs actuels</label>
+                    <input type="number" id="current-users" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optionnel)</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Demander ma consultation
+                </button>
+            </form>
+        </div>
+    </div>
+<!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        Le support informatique en ligne indispensable pour l'Afrique. 
+                        Nous accompagnons particuliers et entreprises dans leur transformation digitale.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="mobile-nav.js"></script>
+    <script src="script-pages/cloud-m365.js"></script>
+</body>
+</html>

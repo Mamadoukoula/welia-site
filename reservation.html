@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Réservation - Welia Online Support Africa</title>
+    <meta name="description" content="Formulaire de contact pour demande d'intervention ou question - Welia Online Support Africa">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css-pages/reservation.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+
+                <!-- Navigation simple -->
+                <nav class="nav-simple">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page principale du formulaire -->
+    <main class="reservation-page">
+        <!-- Header du formulaire -->
+        <section class="form-header">
+            <div class="container">
+                <div class="header-info">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +221 76 458 13 00</span>
+                        <span><i class="fas fa-envelope"></i> contact@welia-africa.com</span>
+                        <span><i class="fas fa-clock"></i> L-V: 9:00 - 19:00 | S-D: 10:00 - 17:00</span>
+                    </div>
+                </div>
+                
+                <div class="form-title-section">
+                    <h1>Formulaire de contact</h1>
+                    <p>Ce formulaire nous permet de traiter votre requête en priorité, pour une demande d'intervention, de rappel ou de contact.</p>
+                    <p>Nous reviendrons rapidement par mail ou téléphone selon votre choix.</p>
+                    <p>Vous pouvez aussi nous contacter au <strong>+221 76 458 13 00</strong> de 8h à 18h.</p>
+                    
+                    <!-- Boutons de type de formulaire -->
+                    <div class="form-type-buttons">
+                        <button class="form-type-btn active" data-form="intervention">
+                            J'AI UNE DEMANDE D'INTERVENTION
+                        </button>
+                        <button class="form-type-btn" data-form="question">
+                            J'AI UNE QUESTION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenu principal -->
+        <section class="form-content">
+            <div class="container">
+                <div class="form-layout">
+                    <!-- Formulaires -->
+                    <div class="forms-section">
+                        <!-- Formulaire d'intervention -->
+                        <div id="intervention-form-container" class="form-container active">
+                            <form id="intervention-form" class="contact-form">
+                                <!-- Indicateur d'étapes -->
+                                <div class="progress-steps">
+                                    <div class="step active">
+                                        <div class="step-number">1</div>
+                                        <span>Contact</span>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <span>Adresse</span>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <span>Détails</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="prenom">Prénom *</label>
+                                        <input type="text" id="prenom" name="prenom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nom">Nom *</label>
+                                        <input type="text" id="nom" name="nom" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="telephone">Téléphone</label>
+                                        <input type="tel" id="telephone" name="telephone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="adresse">Adresse *</label>
+                                        <input type="text" id="adresse" name="adresse" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ville">Ville *</label>
+                                        <input type="text" id="ville" name="ville" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="code-postal">Code postal *</label>
+                                        <input type="text" id="code-postal" name="code-postal" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="autres-details">Autres détails</label>
+                                        <textarea id="autres-details" name="autres-details" rows="3" placeholder="Décrivez votre problème informatique..."></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-paper-plane"></i> ENVOYER
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Formulaire de question -->
+                        <div id="question-form-container" class="form-container">
+                            <form id="question-form" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="q-prenom">Prénom *</label>
+                                        <input type="text" id="q-prenom" name="prenom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="q-nom">Nom *</label>
+                                        <input type="text" id="q-nom" name="nom" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="q-email">E-mail *</label>
+                                        <input type="email" id="q-email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="q-telephone">Téléphone</label>
+                                        <input type="tel" id="q-telephone" name="telephone">
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="question">Votre question *</label>
+                                    <textarea id="question" name="question" rows="8" required placeholder="Décrivez votre problème ou votre question en détail..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-paper-plane"></i> ENVOYER
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar avec informations -->
+                    <div class="sidebar">
+                        <div class="contact-difficulties-card">
+                            <h3>EN CAS DE DIFFICULTÉS AVEC LE FORMULAIRE</h3>
+                            
+                            <div class="contact-method">
+                                <h4>SI BESOIN :</h4>
+                                <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <h4>HORAIRES DE RÉPONSE PAR MAIL :</h4>
+                                <p>Lun → Dim : 8h → 18h</p>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <h4>HORAIRES DE RÉPONSE PAR TÉLÉPHONE :</h4>
+                                <p>Lun Dim : 7h30 → 23h</p>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <h4>INTERVENTIONS :</h4>
+                                <p>Lun → Dim : 8h30 → 18h30</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="faq-section">
+                            <h3>Réponses à vos Questions</h3>
+                            <div class="faq-items">
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        Proposez-vous de la vente ou des services en boutique ?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        Oui, nous proposons des services en boutique ainsi que de la vente de matériel informatique.
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        Y a-t-il des dépannages que vous ne faites pas ?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        Nous traitons la plupart des problèmes informatiques. Contactez-nous pour vérifier si nous pouvons vous aider.
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        Quels sont les délais d'intervention ?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        Nous intervenons généralement dans la journée pour les urgences, et sous 48h pour les autres demandes.
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        Quels sont vos tarifs et les modalités de paiement ?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        Nos tarifs varient selon le type d'intervention. Nous acceptons les paiements par espèces, chèque et carte bancaire.
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button class="faq-question">
+                                        Fournissez-vous le matériel si une intervention le nécessite ?
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        Oui, nous pouvons fournir le matériel nécessaire selon vos besoins et notre intervention.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                     <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                </div>
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="reservation.js"></script>
+</body>
+</html>

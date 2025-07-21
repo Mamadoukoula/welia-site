@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Reseaux Sociaux</title>
+    <link rel="stylesheet" href="css-pages/gestion-reseaux-sociaux.css">
+    <link rel="stylesheet" href="styles.css">
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                     <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+               <nav class="nav-desktop">
+                     <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support Technique</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                                
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="services.html#protection">Protection des Données</a>
+                                <a href="services.html#reseaux">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Blog</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="services.html#emailing">Emailing et mass mailing</a>
+                                <a href="services.html#wordpress">Solutions rapides WordPress</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique-improved.html" class="btn btn-question boutique"> 🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question ">Prendre RDV➡️</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Contrôle Parental Section -->
+    <section class="parental-control-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mieux Contrôler l'Accès des Enfants aux Réseaux Sociaux</h2>
+                <p>De plus en plus de plateformes intègrent des outils de contrôle parental pour limiter l'accès aux plus jeunes.</p>
+            </div>
+            
+            <div class="control-content">
+                <div class="control-info">
+                    <p>S'il est difficile d'interdire complètement les réseaux, il est possible de mettre en place certaines safeguardes.</p>
+                    
+                    <div class="control-features">
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Limiter l'accès en fonction de l'âge</h4>
+                                <p>Restrictions d'audience, blocage des contenus sensibles</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bell-slash"></i>
+                            <div>
+                                <h4>Gérer le temps d'écran et les notifications</h4>
+                                <p>Pour éviter une surexposition</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-filter"></i>
+                            <div>
+                                <h4>Suivre l'activité et configurer les filtres de contenu</h4>
+                                <p>Pour une navigation plus sécurisée</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-section">
+                        <h3>Besoin d'aide pour les comptes des enfants ?</h3>
+                        <p>TikTok, Instagram, YouTube, Twitch, Snapchat, Discord...</p>
+                        <p class="help-subtitle">Contactez-nous pour une aide personnalisée</p>
+                        <button class="btn btn-warning" onclick="contactForKidsHelp()">
+                            Contactez-nous
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="control-visual">
+                    <div class="security-card">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop" alt="Sécuriser l'accès aux réseaux sociaux">
+                        <div class="security-overlay">
+                            <h3>Sécuriser l'accès aux réseaux sociaux</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sécurisation des Comptes Section -->
+    <section class="account-security-section">
+        <div class="container">
+            <h2>Sécuriser Vos Propres Réseaux et Votre Vie Privée</h2>
+            
+            <div class="security-grid">
+                <div class="security-info">
+                    <div class="security-visual-main">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop" alt="Sécurité des réseaux sociaux">
+                        <div class="security-overlay-main">
+                            <h3>Sécurité des réseaux sociaux</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="security-content">
+                    <div class="warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Le partage de contenus privés peut devenir incontrôlable. Photos de famille, vidéos personnelles, informations sensibles...</p>
+                    </div>
+                    
+                    <p>Par de mauvais paramétrages vous pouvez créer une usine à gaz.</p>
+                    <p><strong>Savez-vous vraiment qui peut voir ce que vous publiez ?</strong></p>
+                    
+                    <div class="security-features">
+                        <div class="security-item">
+                            <i class="fas fa-cog"></i>
+                            <div>
+                                <h4>Gestion des paramètres de confidentialité</h4>
+                                <p>Qui peut voir vos publications ?</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-lock"></i>
+                            <div>
+                                <h4>Sécurisation des comptes</h4>
+                                <p>Activer l'authentification à deux facteurs, empêcher l'usurpation d'identité</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h4>Audit de présence numérique</h4>
+                                <p>Vérification des informations personnelles accessibles en ligne</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="doubt-section">
+                        <h3>Un doute sur la protection de vos comptes ?</h3>
+                        <p>Nous vous aidons à vérifier et sécuriser vos profils en ligne</p>
+                        <button class="btn btn-warning" onclick="contactForSecurityAudit()">
+                            Contactez-nous
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test de Sécurité Section -->
+    <section class="security-test-section" id="security-test">
+        <div class="container">
+            <div class="test-header">
+                <h2><i class="fas fa-shield-alt"></i> Test de Sécurité des Réseaux Sociaux</h2>
+                <p>Évaluez votre niveau de protection en quelques minutes</p>
+            </div>
+            
+            <div id="test-container" class="test-container">
+                <button id="start-test" class="btn btn-primary btn-large">
+                    <i class="fas fa-play"></i>
+                    Commencer le Test
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2>Besoin d'aide personnalisée ?</h2>
+                    <p class="contact-subtitle">Notre équipe d'experts vous accompagne dans la sécurisation de vos réseaux sociaux</p>
+                </div>
+                
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Appelez-nous</h3>
+                        <p>Intervention immédiate</p>
+                        <a href="tel:+33123456789" class="btn btn-primary">
+                            01 23 45 67 89
+                        </a>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Chat en temps réel</p>
+                        <a href="https://wa.me/33123456789" class="btn btn-success" target="_blank">
+                            Démarrer le chat
+                        </a>
+                    </div>
+                    
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>Réponse sous 24h</p>
+                        <a href="mailto:contact@support-enligne.com" class="btn btn-outline">
+                            Nous écrire
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        Le support informatique en ligne indispensable pour l'Afrique. 
+                        Nous accompagnons particuliers et entreprises dans leur transformation digitale.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-pages/gestion-reseaux-sociaux.js"></script>
+</body>
+</html>

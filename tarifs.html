@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - WELIA Online Support IT Africa</title>
+    <link rel="stylesheet" href="css-pages/tarifs.css">
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+       <div class="container">
+            <div class="header-content">
+                
+                     <!-- Logo -->
+                <div class="logo">
+                  <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+            
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support IT</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Cloud</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                  <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique">🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question">Prendre RDV➡️</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-tarifs">
+        <div class="container">
+            <h1>Nos Tarifs</h1>
+            <p>Des solutions IT adaptées à chaque besoin et budget en Afrique</p>
+        </div>
+    </section>
+
+    <!-- Tarifs Navigation -->
+    <section class="tarifs-nav">
+        <div class="container">
+            <div class="tarifs-tabs">
+                <button class="tab-btn active" data-target="particuliers">
+                    <i class="fas fa-user"></i>
+                    Particuliers
+                </button>
+                <button class="tab-btn" data-target="entreprises">
+                    <i class="fas fa-building"></i>
+                    Entreprises
+                </button>
+                <button class="tab-btn" data-target="tpe-pme">
+                    <i class="fas fa-store"></i>
+                    TPE/PME
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Content -->
+    <section class="tarifs-content">
+        <div class="container">
+            
+            <!-- Particuliers -->
+            <div id="particuliers" class="tarifs-section active">
+                <h2>Tarifs Particuliers</h2>
+                <p class="section-description">Solutions IT personnalisées pour les particuliers</p>
+                
+                <div class="pricing-grid">
+                    <!-- Support Basique -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Support Basique</h3>
+                            <div class="price">
+                                <span class="amount">15 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support technique 8h-18h</li>
+                                <li><i class="fas fa-check"></i> 2 interventions/mois</li>
+                                <li><i class="fas fa-check"></i> Support par email</li>
+                                <li><i class="fas fa-check"></i> Diagnostic à distance</li>
+                                <li><i class="fas fa-check"></i> Installation logiciels basiques</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Support Basique Particuliers', '15000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Support Premium -->
+                    <div class="pricing-card featured">
+                        <div class="card-header">
+                            <span class="popular-badge">Populaire</span>
+                            <h3>Support Premium</h3>
+                            <div class="price">
+                                <span class="amount">25 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support technique 24h/7</li>
+                                <li><i class="fas fa-check"></i> 5 interventions/mois</li>
+                                <li><i class="fas fa-check"></i> Support par email, chat et téléphone</li>
+                                <li><i class="fas fa-check"></i> Maintenance préventive</li>
+                                <li><i class="fas fa-check"></i> Sauvegarde données (50 GB)</li>
+                                <li><i class="fas fa-check"></i> Installation et configuration</li>
+                                <li><i class="fas fa-check"></i> Formation utilisateur</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Support Premium Particuliers', '25000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Support Pro -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Support Pro</h3>
+                            <div class="price">
+                                <span class="amount">40 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support technique 24h/7</li>
+                                <li><i class="fas fa-check"></i> Interventions illimitées</li>
+                                <li><i class="fas fa-check"></i> Support prioritaire</li>
+                                <li><i class="fas fa-check"></i> Maintenance préventive mensuelle</li>
+                                <li><i class="fas fa-check"></i> Sauvegarde données (200 GB)</li>
+                                <li><i class="fas fa-check"></i> Sécurité avancée</li>
+                                <li><i class="fas fa-check"></i> Déplacement à domicile (2/mois)</li>
+                                <li><i class="fas fa-check"></i> Formation personnalisée</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Support Pro Particuliers', '40000')">
+                            Commander
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entreprises -->
+            <div id="entreprises" class="tarifs-section">
+                <h2>Tarifs Entreprises</h2>
+                <p class="section-description">Solutions IT complètes pour les grandes entreprises</p>
+                
+                <div class="pricing-grid">
+                    <!-- Standard Enterprise -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Standard Enterprise</h3>
+                            <div class="price">
+                                <span class="amount">150 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 24h/7</li>
+                                <li><i class="fas fa-check"></i> Jusqu'à 50 postes</li>
+                                <li><i class="fas fa-check"></i> Maintenance serveurs</li>
+                                <li><i class="fas fa-check"></i> Sauvegardes automatiques</li>
+                                <li><i class="fas fa-check"></i> Sécurité réseau</li>
+                                <li><i class="fas fa-check"></i> Help desk dédié</li>
+                                <li><i class="fas fa-check"></i> Interventions sur site (4/mois)</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Standard Enterprise', '150000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Premium Enterprise -->
+                    <div class="pricing-card featured">
+                        <div class="card-header">
+                            <span class="popular-badge">Recommandé</span>
+                            <h3>Premium Enterprise</h3>
+                            <div class="price">
+                                <span class="amount">300 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 24h/7</li>
+                                <li><i class="fas fa-check"></i> Jusqu'à 150 postes</li>
+                                <li><i class="fas fa-check"></i> Infrastructure complète</li>
+                                <li><i class="fas fa-check"></i> Cloud privé (500 GB)</li>
+                                <li><i class="fas fa-check"></i> Sécurité avancée + antivirus</li>
+                                <li><i class="fas fa-check"></i> Help desk prioritaire</li>
+                                <li><i class="fas fa-check"></i> Interventions illimitées</li>
+                                <li><i class="fas fa-check"></i> Formation équipes IT</li>
+                                <li><i class="fas fa-check"></i> Monitoring 24h/7</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Premium Enterprise', '300000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Enterprise Plus -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Enterprise Plus</h3>
+                            <div class="price">
+                                <span class="amount">500 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 24h/7</li>
+                                <li><i class="fas fa-check"></i> Postes illimités</li>
+                                <li><i class="fas fa-check"></i> Infrastructure sur mesure</li>
+                                <li><i class="fas fa-check"></i> Cloud hybride (2 TB)</li>
+                                <li><i class="fas fa-check"></i> Cybersécurité avancée</li>
+                                <li><i class="fas fa-check"></i> Équipe dédiée</li>
+                                <li><i class="fas fa-check"></i> SLA garanti 99.9%</li>
+                                <li><i class="fas fa-check"></i> Consulting stratégique</li>
+                                <li><i class="fas fa-check"></i> Développement sur mesure</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Enterprise Plus', '500000')">
+                            Commander
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TPE/PME -->
+            <div id="tpe-pme" class="tarifs-section">
+                <h2>Tarifs TPE/PME</h2>
+                <p class="section-description">Solutions IT flexibles pour les petites et moyennes entreprises</p>
+                
+                <div class="pricing-grid">
+                    <!-- Starter PME -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Starter PME</h3>
+                            <div class="price">
+                                <span class="amount">50 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 8h-18h</li>
+                                <li><i class="fas fa-check"></i> Jusqu'à 10 postes</li>
+                                <li><i class="fas fa-check"></i> Maintenance basique</li>
+                                <li><i class="fas fa-check"></i> Email professionnel</li>
+                                <li><i class="fas fa-check"></i> Sauvegarde (100 GB)</li>
+                                <li><i class="fas fa-check"></i> Antivirus entreprise</li>
+                                <li><i class="fas fa-check"></i> Support par email/téléphone</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Starter PME', '50000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Business PME -->
+                    <div class="pricing-card featured">
+                        <div class="card-header">
+                            <span class="popular-badge">Idéal PME</span>
+                            <h3>Business PME</h3>
+                            <div class="price">
+                                <span class="amount">100 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 24h/7</li>
+                                <li><i class="fas fa-check"></i> Jusqu'à 25 postes</li>
+                                <li><i class="fas fa-check"></i> Serveur dédié</li>
+                                <li><i class="fas fa-check"></i> Suite Office 365</li>
+                                <li><i class="fas fa-check"></i> Sauvegarde cloud (300 GB)</li>
+                                <li><i class="fas fa-check"></i> Sécurité renforcée</li>
+                                <li><i class="fas fa-check"></i> Formation équipes</li>
+                                <li><i class="fas fa-check"></i> Intervention sur site (2/mois)</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Business PME', '100000')">
+                            Commander
+                        </button>
+                    </div>
+
+                    <!-- Growth PME -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Growth PME</h3>
+                            <div class="price">
+                                <span class="amount">180 000</span>
+                                <span class="currency">FCFA/mois</span>
+                            </div>
+                        </div>
+                        <div class="card-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Support 24h/7</li>
+                                <li><i class="fas fa-check"></i> Jusqu'à 50 postes</li>
+                                <li><i class="fas fa-check"></i> Infrastructure évolutive</li>
+                                <li><i class="fas fa-check"></i> Cloud hybride (1 TB)</li>
+                                <li><i class="fas fa-check"></i> Cybersécurité avancée</li>
+                                <li><i class="fas fa-check"></i> CRM intégré</li>
+                                <li><i class="fas fa-check"></i> Support prioritaire</li>
+                                <li><i class="fas fa-check"></i> Consulting mensuel</li>
+                                <li><i class="fas fa-check"></i> Monitoring avancé</li>
+                            </ul>
+                        </div>
+                        <button class="btn-tarif" onclick="commanderService('Growth PME', '180000')">
+                            Commander
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison -->
+    <section class="features-comparison">
+        <div class="container">
+            <h2>Pourquoi Choisir WELIA ?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Support 24h/7</h3>
+                    <p>Une équipe disponible en permanence pour vos urgences IT</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Présence Africaine</h3>
+                    <p>Comprendre les défis IT spécifiques au continent africain</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Tarifs Adaptés</h3>
+                    <p>Des prix compétitifs adaptés à l'économie africaine</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Expertise Locale</h3>
+                    <p>Des techniciens qui connaissent votre environnement</p>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Assistance Distant</h3>
+                    <p>A travers nos outils "remote assistance" nous pouvons vous assister sans se deplacer</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-building"></i>
+                    <h3>Partenaire Lead IT</h3>
+                    <p>Nos partenaires Technologiques sont leader dans leurs domaine IT </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo et description -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        Le support informatique en ligne indispensable pour l'Afrique. 
+                        Nous accompagnons particuliers et entreprises dans leur transformation digitale.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="#">Assistance Informatique</a></li>
+                        <li><a href="depannage-page.html">Dépannage à Distance</a></li>
+                        <li><a href="#">Sécurité Wi-Fi</a></li>
+                        <li><a href="#">Protection Antivirus</a></li>
+                        <li><a href="#">Services Web</a></li>
+                        <li><a href="#">Formation Informatique</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Pour Particuliers</a></li>
+                        <li><a href="#">Pour Entreprises</a></li>
+                        <li><a href="#">Pour TPE/PME</a></li>
+                        <li><a href="#">Support 24/7</a></li>
+                        <li><a href="#">Maintenance Préventive</a></li>
+                        <li><a href="#">Consulting IT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@welia-africa.com">contact@welia-africa.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+221764581300">+221 76 458 13 00</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <address>
+                                Dakar, Senegal<br>
+                                Sicap foire, Rue des Jardins
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Welia Online Support Africa. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-pages/tarifs.js"></script>
+</body>
+</html>

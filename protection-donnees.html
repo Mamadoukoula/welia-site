@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protection des Données - WELIA Assistance Informatique</title>
+    <meta name="description" content="Conseils et services pour protéger vos données personnelles et professionnelles. Sauvegarde, récupération, sécurisation avec WELIA.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css-pages/protection-donnees.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="logo/welialogo.png" href="index.html" alt="WELIA Logo" class="logo-icon">
+                   </a>
+                </div>
+
+                <!-- Navigation Desktop -->
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-section">
+                                <h5>Infras & Support IT</h5>
+                                <a href="services.html#decouvrir">Découvrir le service</a>
+                                <a href="depannage-page.html">Assistance et dépannage</a>
+                                <a href="choix-materiel.html">Bien choisir votre matériel</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Sécurité Informatique</h5>
+                                <a href="anti-virus-malware.html">Anti-Virus & Malwares</a>
+                                <a href="protection-donnees.html">Protection des Données</a>
+                                <a href="gestion-reseaux-sociaux.html">Réseaux sociaux</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <h5>Assistance Web et Cloud</h5>
+                                <a href="services.html#creation-web">Création/maintenance de sites web</a>
+                                <a href="cloud-m365.html">Solutions cloud Microsoft 365</a>
+                                <a href="migration-identity.html">Hybridation /Migration Windows</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tarifs.html" class="nav-link">Nos Tarifs</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Right side buttons -->
+                <div class="header-actions">
+                    <button class="btn-icon cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <a href="boutique.html" class="btn btn-question boutique">🛒Boutique</a>
+                    <a href="reservation.html" class="btn btn-question">Prendre RDV➡️</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                </div>
+
+                <!-- Bouton Menu Mobile -->
+                <button class="mobile-menu-btn" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+    </header>
+
+ 
+
+
+    <!-- NOUVELLE SECTION : Protection des Données Personnelles -->
+    <section class="donnees-personnelles">
+        <div class="container">
+            <div class="section-header">
+                <h2>Protection des Données Personnelles</h2>
+                <p>Comprendre et exercer vos droits, protéger votre vie privée sur internet</p>
+            </div>
+
+            <div class="privacy-grid">
+                <!-- RGPD & Droits -->
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Vos Droits RGPD</h3>
+                    <p>Droit d'accès, de rectification, d'effacement, de portabilité... Découvrez tous vos droits et comment les exercer.</p>
+                    <ul class="privacy-features">
+                        <li>Accéder à vos données</li>
+                        <li>Corriger les erreurs</li>
+                        <li>Demander la suppression</li>
+                        <li>Récupérer vos données</li>
+                    </ul>
+                    <button class="btn btn-outline privacy-btn" data-privacy="rgpd">
+                        En savoir plus
+                    </button>
+                </div>
+
+                <!-- Réseaux Sociaux -->
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Réseaux Sociaux</h3>
+                    <p>Paramétrez correctement Facebook, Instagram, TikTok, LinkedIn pour protéger votre vie privée.</p>
+                    <ul class="privacy-features">
+                        <li>Contrôler la visibilité</li>
+                        <li>Gérer les données partagées</li>
+                        <li>Limiter le tracking</li>
+                        <li>Sécuriser votre profil</li>
+                    </ul>
+                    <button class="btn btn-outline privacy-btn" data-privacy="reseaux">
+                        Configurer
+                    </button>
+                </div>
+
+                <!-- Navigation Web -->
+                <div class="privacy-card">
+                    <div class="privacy-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Navigation Privée</h3>
+                    <p>Naviguez en toute discrétion avec les bons outils et paramètres pour protéger votre activité en ligne.</p>
+                    <ul class="privacy-features">
+                        <li>Navigateurs respectueux</li>
+                        <li>Extensions de protection</li>
+                        <li>VPN et proxy</li>
+                        <li>Moteurs de recherche privés</li>
+                    </ul>
+                    <button class="btn btn-outline privacy-btn" data-privacy="navigation">
+                        Découvrir
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Quiz Interactif -->
+            <div class="quiz-section">
+                <h3>
+                    <i class="fas fa-question-circle"></i>
+                    Testez vos connaissances en protection des données
+                </h3>
+                <p>Évaluez votre niveau de protection actuel avec notre quiz interactif</p>
+                <button class="btn btn-primary" id="start-quiz">
+                    <i class="fas fa-play"></i>
+                    Commencer le Quiz
+                </button>
+                <div id="quiz-container" style="display: none;">
+                    <!-- Le quiz sera généré par JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services de Récupération -->
+    <section class="recovery-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Récupération de Données, Sécuriser vos Mots de Passe et Emails</h2>
+                <p>Solutions d'urgence et prévention pour vos données critiques</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Récupération de Données -->
+                <div class="service-card" data-service="recuperation">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600" alt="Récupération de données">
+                        <div class="service-overlay">
+                            <div class="service-badge">
+                                <i class="fas fa-ambulance"></i>
+                                <span>Tout n'est pas perdu !</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Récupération de Données</h3>
+                        <p>Vous avez supprimé vos données par erreur. Ou votre support (clé USB) ne fonctionne plus, cela ne veut pas forcément dire que tout n'est pas perdu.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Diagnostic gratuit</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Récupération sur tous supports</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Taux de réussite élevé</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline service-btn">
+                            Lire +
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gestion des Mots de Passe -->
+                <div class="service-card" data-service="mots-de-passe">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600" alt="Gestion des mots de passe">
+                        <div class="service-overlay">
+                            <div class="service-badge">
+                                <i class="fas fa-key"></i>
+                                <span>Un seul à retenir !</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Gestion des Mots de Passe</h3>
+                        <p>Créer un mot de passe maître solide pour accéder à tous vos mots de passe. Quelle application choisir ? Comment ça marche ?</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Gestionnaire sécurisé</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Générateur de mots de passe</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Synchronisation multi-appareils</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline service-btn">
+                            Lire +
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sécuriser vos Emails -->
+                <div class="service-card" data-service="emails">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=600" alt="Sécuriser emails">
+                        <div class="service-overlay">
+                            <div class="service-badge">
+                                <i class="fas fa-envelope-open-text"></i>
+                                <span>SSL/TLS, IMAP, Exchange ?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Sécuriser vos Emails</h3>
+                        <p>Sécuriser vos échanges par email peut se faire au minimum via le chiffrement. Il s'agit de se poser les bonnes questions.</p>
+                        <div class="service-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Chiffrement des emails</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Protection anti-phishing</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Authentification à deux facteurs</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline service-btn">
+                            Lire +
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions Fréquentes sur la Protection des Données</h2>
+                <p>Trouvez rapidement les réponses à vos questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Que faire si mes données personnelles ont été piratées ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En cas de violation de données : 1) Changez immédiatement tous vos mots de passe, 2) Contactez votre banque si des données financières sont concernées, 3) Signalez l'incident à la CNIL, 4) Surveillez vos comptes régulièrement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment supprimer mes données d'un site web ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Utilisez votre droit à l'effacement (RGPD) : contactez le service client du site, demandez la suppression complète de votre compte et de toutes vos données. Conservez une preuve de votre demande.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Quelle est la différence entre données personnelles et données sensibles ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les données personnelles identifient une personne (nom, email, IP). Les données sensibles révèlent l'origine, les opinions politiques, la religion, la santé, l'orientation sexuelle et bénéficient d'une protection renforcée.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Comment paramétrer Facebook pour protéger ma vie privée ?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Allez dans Paramètres > Confidentialité : limitez qui peut voir vos publications, désactivez la reconnaissance faciale, contrôlez les données partagées avec les applications tierces, et revoyez votre historique de connexion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conseils et Bonnes Pratiques -->
+    <section class="conseils-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conseils et Bonnes Pratiques</h2>
+                <p>Des recommandations essentielles pour protéger vos données au quotidien</p>
+            </div>
+
+            <div class="conseils-grid">
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Règle 3-2-1</h3>
+                    <p>3 copies de vos données, sur 2 supports différents, dont 1 hors site. Cette règle d'or garantit une protection optimale.</p>
+                </div>
+
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Mots de Passe Forts</h3>
+                    <p>Utilisez des mots de passe uniques, complexes et différents pour chaque compte. Un gestionnaire facilite cette tâche.</p>
+                </div>
+
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Mises à Jour</h3>
+                    <p>Maintenez vos systèmes et logiciels à jour. Les correctifs de sécurité sont essentiels contre les vulnérabilités.</p>
+                </div>
+
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Vigilance Email</h3>
+                    <p>Méfiez-vous des emails suspects, liens douteux et pièces jointes inconnues. Le phishing reste une menace majeure.</p>
+                </div>
+
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Wi-Fi Sécurisé</h3>
+                    <p>Évitez les réseaux Wi-Fi publics pour les données sensibles. Utilisez un VPN si nécessaire.</p>
+                </div>
+
+                <div class="conseil-card">
+                    <div class="conseil-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Sauvegarde Régulière</h3>
+                    <p>Automatisez vos sauvegardes et testez régulièrement la restauration. Une sauvegarde non testée est inutile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                         <a href="index.html">
+                       <img src="logo/welialogo.png" alt="WELIA Logo" class="footer-logo-icon">
+                       </a> 
+                    </div>
+                    <p class="footer-desc">
+                        WELIA est votre partenaire de confiance pour tous vos besoins en
+                        assistance informatique en Afrique.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="depannage.html">Dépannage PC</a></li>
+                        <li><a href="antivirus-securite.html">Antivirus & Sécurité</a></li>
+                        <li><a href="protection-donnees.html">Protection des Données</a></li>
+                        <li><a href="choix-materiel.html">Choix Matériel</a></li>
+                        <li><a href="services.html">Tous les services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Adresse: 123 Rue de l'Informatique, Ville, Pays</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1234567890">Téléphone: +1 234 567 890</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@welia.com">Email: info@welia.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WELIA. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="politique-confidentialite.html">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script-pages/protection-donnees.js"></script>
+</body>
+</html>
