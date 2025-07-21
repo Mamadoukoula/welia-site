@@ -1,0 +1,841 @@
+/* Variables CSS pour la protection des données */
+:root {
+    --protection-primary: #3b82f6;
+    --protection-secondary: #8b5cf6;
+    --protection-accent: #f97316;
+    --protection-success: #10b981;
+    --protection-warning: #f59e0b;
+    --protection-danger: #ef4444;
+    --protection-dark: #1f2937;
+    --protection-light: #f8fafc;
+    --protection-gray: #6b7280;
+    --privacy-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Hero Section Protection */
+.hero-protection {
+    background: linear-gradient(135deg, var(--protection-light) 0%, #e2e8f0 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-protection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+}
+
+.hero-protection .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-protection .hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--protection-dark);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-protection .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--protection-gray);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.hero-protection .hero-description {
+    font-size: 1.5rem;
+    color: var(--protection-primary);
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.hero-protection .hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-protection .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-protection .hero-image img:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Services de Protection */
+.protection-services {
+    padding: 80px 0;
+    background: white;
+}
+
+.recovery-services {
+    padding: 80px 0;
+    background: var(--protection-light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.9), rgba(139, 92, 246, 0.9));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-badge {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 15px 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.service-badge i {
+    font-size: 18px;
+}
+
+.service-content {
+    padding: 30px;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--protection-dark);
+    margin-bottom: 15px;
+}
+
+.service-content > p {
+    color: var(--protection-gray);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-features {
+    margin-bottom: 25px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.feature-item i {
+    color: var(--protection-success);
+    font-size: 16px;
+    width: 20px;
+}
+
+.feature-item span {
+    color: var(--protection-gray);
+    font-size: 14px;
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid var(--protection-primary);
+    color: var(--protection-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+    background: var(--protection-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* NOUVELLE SECTION: Protection des Données Personnelles */
+.donnees-personnelles {
+    padding: 80px 0;
+    background: var(--privacy-gradient);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.donnees-personnelles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="privacy-pattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23privacy-pattern)"/></svg>');
+}
+
+.donnees-personnelles .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.donnees-personnelles .section-header h2 {
+    color: white;
+}
+
+.donnees-personnelles .section-header p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.privacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.privacy-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.privacy-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.privacy-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.privacy-card:hover .privacy-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.privacy-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.privacy-card > p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.privacy-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.privacy-features li {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+}
+
+.privacy-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.privacy-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.privacy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Quiz Section */
+.quiz-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.quiz-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.quiz-section h3 i {
+    color: #fbbf24;
+    margin-right: 10px;
+}
+
+.quiz-section p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+#quiz-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.quiz-question {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    margin-top: 15px;
+}
+
+.quiz-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.quiz-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.quiz-option.selected {
+    background: rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+}
+
+.quiz-result {
+    background: rgba(16, 185, 129, 0.2);
+    border: 2px solid #10b981;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: #f9fafb;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-question h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--protection-dark);
+    margin: 0;
+    flex: 1;
+}
+
+.faq-question i {
+    color: var(--protection-primary);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 30px 25px;
+    max-height: 200px;
+}
+
+.faq-answer p {
+    color: var(--protection-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Section Conseils */
+.conseils-section {
+    padding: 80px 0;
+    background: var(--protection-dark);
+    color: rgb(185, 124, 31);
+}
+
+.conseils-section .section-header h2 {
+    color: rgb(255, 255, 255);
+}
+
+.conseils-section .section-header p {
+    color: #9ca3af;
+}
+
+.conseils-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.conseil-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.conseil-card:hover {
+    background: rgba(72, 77, 33, 0.874);
+    transform: translateY(-5px);
+}
+
+.conseil-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--protection-primary), var(--protection-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.conseil-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.conseil-card p {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* Section Contact Service */
+.contact-service {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--protection-secondary), #a855f7);
+    color: white;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    font-size: 40px;
+}
+
+.contact-service h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-direct {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.contact-direct a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.contact-direct a:hover {
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.privacy-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.service-card:nth-child(2),
+.privacy-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3),
+.privacy-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.service-card:nth-child(4),
+.privacy-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.conseil-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.conseil-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.conseil-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.conseil-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.conseil-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.conseil-card:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-protection {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-protection .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-protection .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-protection .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .hero-protection .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-protection .hero-image img {
+        transform: none;
+    }
+    
+    .services-grid,
+    .privacy-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .conseils-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .protection-services,
+    .recovery-services,
+    .donnees-personnelles,
+    .faq-section,
+    .conseils-section,
+    .contact-service {
+        padding: 60px 0;
+    }
+    
+    .contact-service h3 {
+        font-size: 2rem;
+    }
+    
+    .contact-quote {
+        font-size: 1.1rem;
+    }
+
+    .quiz-section {
+        padding: 30px 20px;
+    }
+
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-protection .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-protection .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .service-content {
+        padding: 20px;
+    }
+    
+    .conseil-card,
+    .privacy-card {
+        padding: 20px;
+    }
+    
+    .hero-protection .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .quiz-section h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .privacy-card,
+    .conseil-card,
+    .hero-protection .hero-image img {
+        animation: none;
+        transition: none;
+    }
+    
+    .service-card:hover,
+    .privacy-card:hover,
+    .conseil-card:hover {
+        transform: none;
+    }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+    .service-card {
+        background: #374151;
+        color: white;
+    }
+    
+    .service-content h3 {
+        color: white;
+    }
+    
+    .service-content > p {
+        color: #d1d5db;
+    }
+    
+    .feature-item span {
+        color: #d1d5db;
+    }
+
+    .faq-section {
+        background: #1f2937;
+    }
+
+    .faq-item {
+        background: #374151;
+    }
+
+    .faq-question h4 {
+        color: white;
+    }
+
+    .faq-answer p {
+        color: #d1d5db;
+    }
+}

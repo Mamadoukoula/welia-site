@@ -1,0 +1,328 @@
+/* ===== POPUP NOUVEAUX PRODUITS - STYLES CSS ===== */
+
+/* Styles pour l'overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        transform: scale(0.8) translateY(-50px);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Nouvelles animations attractives */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4); }
+    50% { box-shadow: 0 8px 30px rgba(255, 107, 107, 0.8), 0 0 20px rgba(255, 107, 107, 0.3); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slideInFromLeft {
+    0% { 
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% { 
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% { 
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    0% { 
+        transform: rotate(-180deg) scale(0.5);
+        opacity: 0;
+    }
+    100% { 
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+}
+
+/* Styles de la popup */
+.popup-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease-out;
+    color: white;
+    text-align: center;
+}
+
+/* Bouton de fermeture avec animation */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    animation: rotateIn 0.6s ease-out 0.2s both;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Badge "NOUVEAU" avec animations */
+.new-badge {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    animation: bounce 2s infinite, glow 3s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+/* Titre avec animation */
+.popup-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* Sous-titre avec animation */
+.popup-subtitle {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+/* Grille des produits avec animations échelonnées */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.product-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+.product-item:nth-child(1) {
+    animation: slideInFromLeft 0.8s ease-out 0.7s both, float 4s ease-in-out 1.5s infinite;
+    animation-delay: 0.7s, 1.5s;
+}
+
+.product-item:nth-child(2) {
+    animation: slideInFromRight 0.8s ease-out 0.9s both, float 4s ease-in-out 2s infinite;
+    animation-delay: 0.9s, 2s;
+}
+
+.product-item:nth-child(3) {
+    animation: slideInFromLeft 0.8s ease-out 1.1s both, float 4s ease-in-out 2.5s infinite;
+    animation-delay: 1.1s, 2.5s;
+}
+
+.product-item:nth-child(4) {
+    animation: slideInFromRight 0.8s ease-out 1.3s both, float 4s ease-in-out 3s infinite;
+    animation-delay: 1.3s, 3s;
+}
+
+.product-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+    animation-play-state: paused;
+}
+
+.product-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+    animation: rotateIn 0.6s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover .product-icon {
+    animation: shake 0.5s ease-in-out;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #ffeaa7;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Bouton d'action avec animations */
+.cta-button {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+    animation: fadeInUp 0.8s ease-out 1.5s both, glow 4s infinite 2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+    animation-play-state: paused;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .popup-container {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .popup-title {
+        font-size: 24px;
+    }
+}
+
+/* Classe pour cacher la popup */
+.hidden {
+    display: none !important;
+}
